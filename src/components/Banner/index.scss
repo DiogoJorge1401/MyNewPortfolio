@@ -1,0 +1,47 @@
+.banner {
+  height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  background-image: url("../../assets/img/banner-bg.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    padding: 0;
+  }
+
+  @keyframes GradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .tagline {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: linear-gradient(90deg, #b0f2b4, #baf2e9, #bad7f2);
+    background-size: 600% 600%;
+    animation: GradientAnimation 30s ease infinite;
+  }
+}
+
+span.cursor {
+  font-weight: 400;
+  color: lightblue;
+}
+
+@keyframes GradientAnimation {
+0%{background-position: 0% 50%}
+50%{background-position: 100% 50%}
+100%{background-position:0% 50%}
+}

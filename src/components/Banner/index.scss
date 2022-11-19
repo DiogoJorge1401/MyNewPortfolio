@@ -1,6 +1,6 @@
 .banner {
-  height: 100vh;
-  padding-top: 100px;
+  min-height: 100vh;
+  padding-top: 6.25rem;
   display: flex;
   align-items: center;
   background-image: url("../../assets/img/banner-bg.png");
@@ -12,36 +12,92 @@
     padding: 0;
   }
 
-  @keyframes GradientAnimation {
-    0% {
-      background-position: 0% 50%;
+  .leftColBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .tagline {
+      width: max-content;
+      display: inline-block;
+      padding: 0.5rem 0.75rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.0625rem;
+      background: linear-gradient(
+        90deg,
+        rgba(170, 54, 124, 0.5) 0,
+        rgba(74, 47, 189, 0.5) 100%
+      );
+
+      border: 0.0625rem solid rgba(255, 255, 255, 0.5);
     }
-    50% {
-      background-position: 100% 50%;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      letter-spacing: 0.05rem;
+      line-height: 1;
+
+      .wrap {
+        border-right: 0.1rem solid #666;
+      }
     }
-    100% {
-      background-position: 0% 50%;
+
+    p {
+      color: #b8b8b8;
+      font-size: 1.25rem;
+      letter-spacing: 0.05rem;
+      line-height: 1.5rem;
+      width: 96%;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.05rem;
+
+      svg {
+        margin-left: 0.625rem;
+        font-size: 1.5rem;
+        transition: 0.3s ease-in-out;
+        line-height: 1;
+      }
+
+      &:hover {
+        svg {
+          margin-left: 1.5rem;
+        }
+      }
     }
   }
 
-  .tagline {
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    padding: 8px 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background: linear-gradient(90deg, #b0f2b4, #baf2e9, #bad7f2);
-    background-size: 600% 600%;
-    animation: GradientAnimation 30s ease infinite;
+  .rightColBanner {
+    img {
+      animation: updown 3s linear infinite;
+    }
+
+    @keyframes updown {
+      0% {
+        transform: translateY(-1.25rem);
+      }
+      50% {
+        transform: translateY(1.25rem);
+      }
+      100% {
+        transform: translateY(-1.25rem);
+      }
+    }
   }
 }
 
 span.cursor {
   font-weight: 400;
   color: lightblue;
-}
-
-@keyframes GradientAnimation {
-0%{background-position: 0% 50%}
-50%{background-position: 100% 50%}
-100%{background-position:0% 50%}
 }

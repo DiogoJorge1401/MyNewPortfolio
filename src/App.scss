@@ -1,5 +1,5 @@
 /* Custom Fonts */
-@import url("css/fonts.css");
+@import url("styles/fonts.scss");
 
 /* Default CSS*/
 * {
@@ -10,7 +10,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 75px;
+  scroll-padding-top: 4.75rem;
 }
 
 body {
@@ -65,7 +65,7 @@ button {
 @media (min-width: 1700px) {
   main .container {
     max-width: 100%;
-    padding: 0 150px;
+    padding: 0 9.5rem;
   }
 }
 

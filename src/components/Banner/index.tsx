@@ -14,7 +14,6 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [stickPulsing, setStickPulsing] = useState("|");
   const [delta, setDelta] = useState(
     300 - (Math.random() * (200 - 50 + 1) + 50)
   );
@@ -49,29 +48,25 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={6} xl={7} className="leftColBanner">
             <span className="tagline">Welcome to My Portfolio</span>
 
             <h1>
               {"Hi I'm Diogo Jorge "}
-              <span className="wrap">
-                {text}
-                <span className="cursor">{stickPulsing}</span>
-              </span>
+              <span className="wrap">{text}</span>
             </h1>
-
+            
             <p>
               Olá me chamo Diogo, tenho 17 anos, apaixonado por programação,
               desevolvo aplicações Fullstack Javascript, e curso técnico de
               informática para internet.
             </p>
-
             <button onClick={() => alert("connect")}>
               Let's connect <ArrowRightCircle size={25} />
             </button>
           </Col>
 
-          <Col xs={12} md={6} xl={5}>
+          <Col xs={12} md={6} xl={5} className="rightColBanner">
             <img src={HeaderImg} alt="Header Img" />
           </Col>
         </Row>

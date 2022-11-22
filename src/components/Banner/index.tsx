@@ -5,11 +5,7 @@ import HeaderImg from "../../assets/img/header-img.svg";
 import "./index.scss";
 
 export const Banner = () => {
-  const toRotate = [
-    "Front-end Developer",
-    "Back-end Developer",
-    "Web Designer",
-  ];
+  const toRotate = ["Frontend Developer", "Backend Developer", "Web Designer"];
 
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -48,14 +44,14 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7} className="leftColBanner">
+          <Col xs={12} md={7} xl={7} className="leftColBanner">
             <span className="tagline">Welcome to My Portfolio</span>
 
             <h1>
               {"Hi I'm Diogo Jorge "}
               <span className="wrap">{text}</span>
             </h1>
-            
+
             <p>
               Olá me chamo Diogo, tenho 17 anos, apaixonado por programação,
               desevolvo aplicações Fullstack Javascript, e curso técnico de
@@ -66,7 +62,7 @@ export const Banner = () => {
             </button>
           </Col>
 
-          <Col xs={12} md={6} xl={5} className="rightColBanner">
+          <Col xs={12} md={5} xl={5} className="rightColBanner">
             <img src={HeaderImg} alt="Header Img" />
           </Col>
         </Row>

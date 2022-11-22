@@ -1,0 +1,55 @@
+.progress-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+
+  .outer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+      -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+
+    .inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+
+      .number {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      circle {
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 25.5px;
+        stroke-dasharray: calc(549.5 * var(--number) / 100);
+        stroke-dashoffset: calc(549.5 * var(--number) / 100);
+        animation: anime 3s linear forwards;
+      }
+      @keyframes anime {
+        100%{
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+  }
+}

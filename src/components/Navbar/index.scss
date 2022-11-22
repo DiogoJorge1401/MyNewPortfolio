@@ -1,13 +1,19 @@
 nav.navbar {
   width: 100%;
-  padding: 1.25rem 0;
+  padding: 0;
+  padding: 1rem 0;
   position: fixed;
   top: 0;
   z-index: 9999;
   transition: 0.3s ease-in;
 
+  @media screen and (max-width: 1024px) {
+    padding: .5rem 0;
+    background-color: rgba(18, 18, 18);
+  }
+
   &.scrolled {
-    padding: 0;
+    padding: 1rem 0;
     background-color: rgba(18, 18, 18, 0.75);
   }
 
@@ -16,7 +22,7 @@ nav.navbar {
   }
 
   a.navbar-brand {
-    max-width: 9%;
+    max-width: 12%;
   }
 
   .navbar-nav {
@@ -74,7 +80,7 @@ nav.navbar {
     &:not(.collapsed) {
       .navbar-toggler-icon {
         &::before {
-          transform: translateY(.5rem) rotate(-45deg);
+          transform: translateY(0.5rem) rotate(-45deg);
         }
 
         &::after {
@@ -105,7 +111,7 @@ span.navbar-text {
       position: relative;
       background: rgba(217, 217, 217, 0.1);
       border-radius: 50%;
-      border: .0625rem solid rgba(255, 255, 255, 0.5);
+      border: 0.0625rem solid rgba(255, 255, 255, 0.5);
 
       &::before {
         content: "";
@@ -142,7 +148,7 @@ span.navbar-text {
     position: relative;
     font-weight: 700;
     color: #fff;
-    border: .0625rem solid #fff;
+    border: 0.0625rem solid #fff;
     background: transparent;
     transition: 0.3s ease-in-out;
 

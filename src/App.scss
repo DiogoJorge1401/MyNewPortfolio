@@ -4,8 +4,20 @@
 /* Default CSS*/
 * {
   margin: 0;
-  padding: 0 ;
-  box-sizing: border-box ;
+  padding: 0;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 95%;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 90%;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 85%;
+  }
 }
 
 html {
@@ -44,8 +56,9 @@ ul {
   text-decoration: none;
 }
 
-a:hover {
+a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {

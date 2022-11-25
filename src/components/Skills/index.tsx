@@ -7,16 +7,20 @@ import "./index.scss";
 
 export const Skills = () => {
   const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1024 },
+    extraLargeScreens: {
+      breakpoint: { max: 4000, min: 1401 },
       items: 5,
     },
+    superLargeDesktop: {
+      breakpoint: { max: 1400, min: 1025 },
+      items: 4,
+    },
     desktop: {
-      breakpoint: { max: 1024, min: 768 },
+      breakpoint: { max: 1024, min: 769 },
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 768, min: 480 },
+      breakpoint: { max: 768, min: 481 },
       items: 2,
     },
     mobile: {
@@ -31,13 +35,12 @@ export const Skills = () => {
         <Row>
           <Col className="p-0">
             <div className="skill-bx">
-              <h2>Skills</h2>
+              <h2>Habilidades</h2>
 
               <p>
                 Minha capacitação é proveniente de cursos e conteúdos
-                disponíveis na web.
-                <br /> Ao longo de 2 anos e meio na área consegui por meios de
-                projetos pessoais aprender:
+                disponíveis na web. Ao longo de 2 anos e meio na área consegui
+                por meios de projetos pessoais aprender:
               </p>
 
               <Carousel

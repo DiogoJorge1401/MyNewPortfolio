@@ -1,15 +1,14 @@
 nav.navbar {
   width: 100%;
   padding: 0;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   position: fixed;
   top: 0;
   z-index: 9999;
   transition: 0.3s ease-in;
 
-  @media screen and (max-width: 1024px) {
-    padding: .5rem 0;
-    background-color: rgba(18, 18, 18);
+  @media screen and (max-width: 768px) {
+    background-color: rgba(18, 18, 18, 0.75);
   }
 
   &.scrolled {
@@ -126,7 +125,6 @@ span.navbar-text {
 
       img {
         width: 40%;
-        // z-index: 1;
         transition: 0.3s ease-in-out;
       }
 
@@ -144,6 +142,7 @@ span.navbar-text {
   }
 
   button {
+    font-size: 1rem;
     padding: 1.25rem 2rem;
     position: relative;
     font-weight: 700;

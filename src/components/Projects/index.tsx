@@ -20,9 +20,9 @@ export const Projects = () => {
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Tab.Content id="slideInUp">
                 <Tab.Pane eventKey="first">
-                  <Row>
+                  <Row className='projects-container'>
                     {projects.map((el, idx) => (
-                      <ProjectCard {...el} />
+                      <ProjectCard {...el} key={idx} />
                     ))}
                   </Row>
                 </Tab.Pane>

@@ -6,6 +6,10 @@
     padding: 0 1rem 3.25rem;
   }
 
+  @media screen and (max-width: 768px) {
+    padding: 0 2rem 3.25rem;
+  }
+
   .skill-bx {
     display: flex;
     flex-direction: column;

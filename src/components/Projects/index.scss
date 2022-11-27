@@ -21,6 +21,12 @@
     color: #b8b8b8;
   }
 
+  .projects-container {
+    @media screen and (max-width: 480px) {
+      padding: 0 1rem;
+    }
+  }
+
   .background-image-right {
     position: absolute;
     top: 20%;

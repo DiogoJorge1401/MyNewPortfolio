@@ -66,7 +66,7 @@ export const Banner = () => {
               desevolvo aplicações Fullstack Javascript, e curso atualmente
               técnico de informática para internet.
             </p>
-            <button onClick={() => alert("connect")}>
+            <button>
               Let's connect <ArrowRightCircle size={25} />
             </button>
           </Col>

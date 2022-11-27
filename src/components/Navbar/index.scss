@@ -1,7 +1,7 @@
 nav.navbar {
   width: 100%;
   padding: 0;
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
   position: fixed;
   top: 0;
   z-index: 9999;
@@ -35,6 +35,9 @@ nav.navbar {
       transition: 0.3s ease-in-out;
 
       &.active {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+
         opacity: 1;
       }
       &:hover {

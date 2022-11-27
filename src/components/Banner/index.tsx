@@ -1,3 +1,4 @@
+import Aos from "aos";
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
@@ -5,8 +6,11 @@ import HeaderImg from "../../assets/img/header-img.svg";
 import "./index.scss";
 
 export const Banner = () => {
-  const toRotate = ["Frontend Developer", "Backend Developer", "Web Designer"];
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
+  const toRotate = ["Frontend Developer", "Backend Developer", "Web Designer"];
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
@@ -43,9 +47,14 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="align-items-center">
+        <Row
+          className="align-items-center"
+          data-aos="fade-down"
+          data-aos-duration="2500"
+          data-aos-easing="ease-in-out"
+        >
           <Col xs={12} md={7} xl={7} className="leftColBanner">
-            <span className="tagline">Welcome to My Portfolio</span>
+            <span className="taglinOe">Welcome to My Portfolio</span>
 
             <h1>
               {"Hi I'm Diogo Jorge "}

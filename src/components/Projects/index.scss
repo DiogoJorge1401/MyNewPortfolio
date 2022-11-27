@@ -1,8 +1,12 @@
 .projects {
   position: relative;
-  padding: 7.5rem 0;
+  padding: 5rem 0;
   background: #000;
   z-index: 0;
+
+  [data-aos="fade-up"] {
+    transform: translate3d(0, 300px, 0);
+  }
 
   h2 {
     font-size: 2.75rem;

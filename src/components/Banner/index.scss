@@ -8,6 +8,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  [data-aos="fade-down"] {
+    transform: translate3d(0, -300px, 0);
+  }
+
   .leftColBanner {
     display: flex;
     flex-direction: column;
@@ -84,19 +88,21 @@
   }
 
   .rightColBanner {
-    img {
-      animation: updown 3s linear infinite;
-    }
+    .rightCol-content {
+      img {
+        animation: updown 3s linear infinite;
+      }
 
-    @keyframes updown {
-      0% {
-        transform: translateY(-1.25rem);
-      }
-      50% {
-        transform: translateY(1.25rem);
-      }
-      100% {
-        transform: translateY(-1.25rem);
+      @keyframes updown {
+        0% {
+          transform: translateY(-1.25rem);
+        }
+        50% {
+          transform: translateY(1.25rem);
+        }
+        100% {
+          transform: translateY(-1.25rem);
+        }
       }
     }
   }

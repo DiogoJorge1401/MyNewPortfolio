@@ -1,10 +1,15 @@
-import { useState } from "react";
+import Aos from 'aos';
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../../assets/img/contact-img.svg";
-import axios from "axios";
 import "./index.scss";
 
 export const Contact = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   const formInitialDetails = {
     firstName: "",
     lastName: "",
@@ -74,7 +79,11 @@ export const Contact = () => {
 
   return (
     <section className="contact" id="connect">
-      <Container>
+      <Container
+        data-aos="fade-left"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+      >
         <Row className="align-items-center">
           <Col md={6}>
             <img src={contactImg} alt="Contact Us" />

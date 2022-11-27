@@ -2,6 +2,10 @@
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   padding: 3.75rem 0 12.5rem;
 
+  [data-aos="fade-left"] {
+    transform: translate3d(300px, 0, 0);
+  }
+
   img {
     width: 92%;
   }
@@ -13,6 +17,9 @@
   }
 
   form {
+    @media screen and (max-width: 480px) {
+      padding: 0 1rem;
+    }
     input,
     textarea {
       width: 100%;
@@ -95,10 +102,6 @@
       &.danger {
         color: red;
       }
-    }
-
-    @media screen and (max-width: 480px) {
-      padding: 0 1rem;
     }
   }
 }

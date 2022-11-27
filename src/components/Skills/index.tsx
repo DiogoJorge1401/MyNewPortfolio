@@ -1,3 +1,5 @@
+import Aos from "aos";
+import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -6,6 +8,10 @@ import { CircularProgressBar } from "../CircularProgressBar";
 import "./index.scss";
 
 export const Skills = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   const responsive = {
     extraLargeScreens: {
       breakpoint: { max: 4000, min: 1401 },
@@ -34,7 +40,12 @@ export const Skills = () => {
       <Container>
         <Row>
           <Col className="p-0">
-            <div className="skill-bx">
+            <div
+              className="skill-bx"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              data-aos-easing="ease-in-out"
+            >
               <h2>Habilidades</h2>
 
               <p>

@@ -16,7 +16,7 @@ export const Contact = () => {
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Enviar");
   const [status, setStatus] = useState<any>({});
-  const [isSubmiting, setIsSubmiting] = useState(false)
+  const [isSubmiting, setIsSubmiting] = useState(false);
 
   const handleFieldUpdate = (e: any) => {
     setFormDetails((prev) => ({
@@ -24,9 +24,34 @@ export const Contact = () => {
       [e.target.name]: e.target.value,
     }));
   };
+
+  const isEmpty = (value: string) => {
+    return value === "";
+  };
+
+  const validatingForm = () => {
+    for (const v of Object.values(formDetails)) {
+      if (isEmpty(v)) return false;
+    }
+    return true;
+  };
+
   const handleOnSubmit = async (e: any) => {
     e.preventDefault();
-    setIsSubmiting(true)
+
+    if (!validatingForm()) {
+      setStatus({
+        message: "Preencha todos os campos.",
+        success: false,
+      });
+
+      setTimeout(() => setStatus({}), 2500);
+
+      return;
+    }
+
+    setIsSubmiting(true);
+
     setButtonText("Eviando...");
     try {
       await axios.post(

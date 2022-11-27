@@ -54,7 +54,7 @@ export const Banner = () => {
           data-aos-easing="ease-in-out"
         >
           <Col xs={12} md={7} xl={7} className="leftColBanner">
-            <span className="taglinOe">Welcome to My Portfolio</span>
+            <span className="tagline">Welcome to My Portfolio</span>
 
             <h1>
               {"Hi I'm Diogo Jorge "}

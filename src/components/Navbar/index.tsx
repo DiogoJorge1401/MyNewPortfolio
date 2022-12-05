@@ -4,6 +4,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../assets/img/logo.svg";
 import navIcon1 from "../../assets/img/nav-icon1.svg";
 import navIcon2 from "../../assets/img/nav-icon2.png";
+import { SocialIcons } from "../SocialIcons";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -21,11 +22,12 @@ export const NavBar = () => {
 
   const isActiveLink = (link: string) => (activeLink === link ? " active" : "");
 
-  const onUpdateActiveLink =
-    (link: string) => (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+  function onUpdateActiveLink(link: string) {
+    return (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
       e.stopPropagation();
       setActiveLink(link);
     };
+  }
 
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -66,14 +68,7 @@ export const NavBar = () => {
           </Nav>
 
           <span className="navbar-text">
-            <div className="social-icons">
-              <a target="_blank" href="https://www.linkedin.com/in/diogo-jorge-br/">
-                <img src={navIcon1} alt="" />
-              </a>
-              <a target="_blank" href="https://github.com/DiogoJorge1401">
-                <img src={navIcon2} alt="" />
-              </a>
-            </div>
+            <SocialIcons />
 
             <button className="vvd">
               <span>Let's connect</span>

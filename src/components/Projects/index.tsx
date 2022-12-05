@@ -16,7 +16,7 @@ export const Projects = () => {
       <Container id="projects">
         <Row
           data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos-duration="1500"
           data-aos-easing="ease-in-out"
         >
           <Col>

@@ -1,7 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import logo from "../../assets/img/logo.svg";
-import footIcon1 from "../../assets/img/nav-icon1.svg";
-import footIcon2 from "../../assets/img/nav-icon2.png";
+import { SocialIcons } from '../SocialIcons';
 import "./index.scss";
 
 export const Footer = () => {
@@ -13,18 +12,7 @@ export const Footer = () => {
         </Col>
 
         <Col className="text-center text-sm-end">
-          <div className="social-icons">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/diogo-jorge-br/"
-            >
-              <img src={footIcon1} />
-            </a>
-
-            <a target="_blank" href="https://github.com/DiogoJorge1401">
-              <img src={footIcon2} />
-            </a>
-          </div>
+          <SocialIcons />
 
           <p>CopyRight 2022. All Right Reserved</p>
         </Col>

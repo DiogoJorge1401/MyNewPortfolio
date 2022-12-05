@@ -1,10 +1,8 @@
-import "./index.scss";
 import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../assets/img/logo.svg";
-import navIcon1 from "../../assets/img/nav-icon1.svg";
-import navIcon2 from "../../assets/img/nav-icon2.png";
 import { SocialIcons } from "../SocialIcons";
+import "./index.scss";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -70,9 +68,9 @@ export const NavBar = () => {
           <span className="navbar-text">
             <SocialIcons />
 
-            <button className="vvd">
+            <a className="vvd" href='#connect'>
               <span>Let's connect</span>
-            </button>
+            </a>
           </span>
         </Navbar.Collapse>
       </Container>

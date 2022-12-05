@@ -66,9 +66,10 @@ export const Banner = () => {
               desenvolvo aplicações Fullstack Javascript, e curso atualmente
               técnico de informática para internet.
             </p>
-            <button>
+
+            <a href="#connect">
               Let's connect <ArrowRightCircle size={25} />
-            </button>
+            </a>
           </Col>
 
           <Col xs={12} md={5} xl={5} className="rightColBanner">

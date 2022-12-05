@@ -35,9 +35,9 @@ export const CircularProgressBar = ({ value }: CircularProgressBarProps) => {
           </defs>
 
           <circle
-            cx="100"
-            cy="100"
-            r="87.5"
+            cx="87.5"
+            cy="87.5"
+            r="81"
             strokeLinecap="round"
             style={{ "--number": value } as any}
           />

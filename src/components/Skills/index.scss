@@ -26,6 +26,10 @@
     background: #151515;
     border-radius: 4rem;
 
+    @media screen and (max-width: 480px) {
+      padding: 3.75rem 0;
+    }
+
     p {
       color: #b8b8b8;
       font-size: 1.25rem;
@@ -43,6 +47,7 @@
       margin: 0 auto;
       width: 80%;
       position: relative;
+      gap: 1rem;
     }
   }
 

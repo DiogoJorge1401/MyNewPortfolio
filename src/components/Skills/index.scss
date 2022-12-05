@@ -1,11 +1,7 @@
 .skills {
   position: relative;
   padding-bottom: 3.25rem;
-  min-height: 100vh;
-
-  @media screen and (max-width: 768px) {
-    padding: 0 1rem 3.25rem;
-  }
+  min-height: 85vh;
 
   @media screen and (max-width: 768px) {
     padding: 0 2rem 3.25rem;

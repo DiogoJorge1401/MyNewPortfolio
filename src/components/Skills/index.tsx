@@ -1,10 +1,10 @@
 import Aos from "aos";
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { SiCss3, SiExpress, SiHtml5, SiJavascript, SiMongodb, SiMysql, SiNodedotjs, SiPostgresql, SiReact, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../../assets/img/color-sharp.png";
-import { CircularProgressBar } from "../CircularProgressBar";
 import "./index.scss";
 
 export const Skills = () => {
@@ -60,52 +60,57 @@ export const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
-                  <CircularProgressBar value={90} />
-                  <h5>HTML</h5>
+                  <SiHtml5 color='#e44c27' />
+                  <h5>HTML5</h5>
                 </div>
 
                 <div className="item">
-                  <CircularProgressBar value={90} />
-                  <h5>CSS</h5>
+                  <SiCss3 color='#214ce5' />
+                  <h5>CSS3</h5>
                 </div>
 
                 <div className="item">
-                  <CircularProgressBar value={90} />
+                  <SiJavascript color='#f8dc3e' />
                   <h5>JavaScript</h5>
                 </div>
 
                 <div className="item">
-                  <CircularProgressBar value={85} />
+                  <SiTailwindcss color='#07b6d5' />
+                  <h5>TailwindCSS</h5>
+                </div>
+
+                <div className="item">
+                  <SiTypescript color='#3079c6' />
                   <h5>Typescript</h5>
                 </div>
 
                 <div className="item">
-                  <CircularProgressBar value={80} />
+                  <SiReact color='#60dbfb' />
                   <h5>ReactJs</h5>
                 </div>
 
                 <div className="item">
-                  <CircularProgressBar value={85} />
+                  <SiNodedotjs color='#83cd29' />
                   <h5>Node.js</h5>
                 </div>
 
                 <div className="item">
-                  <CircularProgressBar value={85} />
-                  <h5>Express</h5>
+                  <SiExpress color='#323232' />
+                  <h5>Express.js</h5>
                 </div>
 
                 <div className="item">
-                  <CircularProgressBar value={80} />
+                  <SiMysql color='#00748e' />
                   <h5>MySQL</h5>
                 </div>
 
                 <div className="item">
-                  <CircularProgressBar value={80} />
+                  <SiPostgresql color='#326790' />
                   <h5>PostgreSQL</h5>
                 </div>
 
                 <div className="item">
-                  <CircularProgressBar value={85} />
+                  <SiMongodb color='#13924e' />
                   <h5>MongoDB</h5>
                 </div>
               </Carousel>

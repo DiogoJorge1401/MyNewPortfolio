@@ -44,6 +44,12 @@
       width: 80%;
       position: relative;
       gap: 1rem;
+
+      .item {
+        svg {
+          font-size: 10rem;
+        }
+      }
     }
   }
 

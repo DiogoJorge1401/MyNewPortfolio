@@ -1,7 +1,7 @@
 import Aos from "aos";
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
+import { BsArrowRightCircle } from 'react-icons/bs'
 import HeaderImg from "../../assets/img/header-img.svg";
 import "./index.scss";
 
@@ -68,7 +68,7 @@ export const Banner = () => {
             </p>
 
             <a href="#connect">
-              Let's connect <ArrowRightCircle size={25} />
+              Let's connect <BsArrowRightCircle size={25} />
             </a>
           </Col>
 

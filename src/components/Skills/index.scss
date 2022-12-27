@@ -45,6 +45,13 @@
       position: relative;
       gap: 1rem;
 
+      .react-multiple-carousel__arrow {
+        @media screen and (max-width: 320px) {
+          min-width: 3rem;
+          min-height: 3rem;
+        }
+      }
+
       .item {
         svg {
           font-size: 10rem;

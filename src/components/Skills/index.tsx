@@ -35,6 +35,50 @@ export const Skills = () => {
     },
   };
 
+  const techs = [{
+    icon: <SiTypescript color='#3079c6' />,
+    tech: "Typescript",
+
+  }, {
+    icon: <SiReact color='#60dbfb' />,
+    tech: "ReactJs",
+
+  }, {
+    icon: <SiNodedotjs color='#83cd29' />,
+    tech: "Node.js"
+  },
+  {
+    icon: <SiExpress color='#323232' />,
+    tech: "Express.js"
+  },
+  {
+    icon: <SiMysql color='#00748e' />,
+    tech: "MySQL"
+  },
+  {
+    icon: <SiPostgresql color='#326790' />,
+    tech: "PostgreSQL"
+  },
+  {
+    icon: <SiMongodb color='#13924e' />,
+    tech: "MongoDB"
+  }, {
+    icon: <SiHtml5 color='#e44c27' />,
+    tech: "HTML5"
+  }, {
+    icon: <SiCss3 color='#214ce5' />,
+    tech: "CSS3",
+
+  }, {
+    icon: <SiJavascript color='#f8dc3e' />,
+    tech: "JavaScript",
+
+  }, {
+    icon: <SiTailwindcss color='#07b6d5' />,
+    tech: "TailwindCSS",
+
+  },]
+
   return (
     <section className="skills" id="skills">
       <Container>
@@ -59,60 +103,13 @@ export const Skills = () => {
                 infinite
                 className="skill-slider"
               >
-                <div className="item">
-                  <SiHtml5 color='#e44c27' />
-                  <h5>HTML5</h5>
-                </div>
-
-                <div className="item">
-                  <SiCss3 color='#214ce5' />
-                  <h5>CSS3</h5>
-                </div>
-
-                <div className="item">
-                  <SiJavascript color='#f8dc3e' />
-                  <h5>JavaScript</h5>
-                </div>
-
-                <div className="item">
-                  <SiTailwindcss color='#07b6d5' />
-                  <h5>TailwindCSS</h5>
-                </div>
-
-                <div className="item">
-                  <SiTypescript color='#3079c6' />
-                  <h5>Typescript</h5>
-                </div>
-
-                <div className="item">
-                  <SiReact color='#60dbfb' />
-                  <h5>ReactJs</h5>
-                </div>
-
-                <div className="item">
-                  <SiNodedotjs color='#83cd29' />
-                  <h5>Node.js</h5>
-                </div>
-
-                <div className="item">
-                  <SiExpress color='#323232' />
-                  <h5>Express.js</h5>
-                </div>
-
-                <div className="item">
-                  <SiMysql color='#00748e' />
-                  <h5>MySQL</h5>
-                </div>
-
-                <div className="item">
-                  <SiPostgresql color='#326790' />
-                  <h5>PostgreSQL</h5>
-                </div>
-
-                <div className="item">
-                  <SiMongodb color='#13924e' />
-                  <h5>MongoDB</h5>
-                </div>
+                {techs.map((el, idx) => (
+                  <div className="item" key={idx}>
+                    {el.icon}
+                    <h5>{el.tech}</h5>
+                  </div>
+                ))
+                }
               </Carousel>
             </div>
           </Col>

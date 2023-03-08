@@ -62,7 +62,7 @@ export const Banner = () => {
             </h1>
 
             <p>
-              Olá me chamo Diogo, tenho 17 anos, apaixonado por programação,
+              Olá me chamo Diogo, tenho 18 anos, apaixonado por programação,
               desenvolvo aplicações Fullstack Javascript, e curso atualmente
               técnico de informática para internet.
             </p>
